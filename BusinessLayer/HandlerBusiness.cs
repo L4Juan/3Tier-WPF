@@ -54,7 +54,7 @@ namespace BusinessLayer
         }
         public bool offersIsValid(string offers)
         {
-			if (offers == "")
+			if (offers == "" || offers == null)
             {
 				return true;
             }
@@ -132,6 +132,11 @@ namespace BusinessLayer
         public void ReStock()
         {
 			dataHandler.ReStock(100);
+        }
+
+        public bool LowStockItems()
+        {
+			return dataHandler.LowStockItems();
         }
     }
 }

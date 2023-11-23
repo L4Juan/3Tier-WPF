@@ -206,14 +206,21 @@
                     InitializeDataGridView();
                 }
             }
+            
+            if(Program.businessHandler.LowStockItems())
+            {
+                
+                MessageBox.Show("You have new messages.", "Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void dataGridView_CellEdit(object sender, DataGridViewCellEventArgs e)
         {
             DialogResult d = DialogResult.No;
-            if (dataGridView_items.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString() == "")
+            if ((string)dataGridView_items.Rows[e.RowIndex].Cells[e.ColumnIndex].Value == null && e.ColumnIndex !=3 )
             {
                 MessageBox.Show("Update value cannot be null", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                InitializeDataGridView();
                 return;
             }
             
@@ -221,7 +228,7 @@
             int itemIndex = e.RowIndex;
             (string, double, int, string) item = Program.businessHandler.GetItemData(itemIndex);
 
-            string newValue = dataGridView_items.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+            string newValue = (string)dataGridView_items.Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
 
 
 
@@ -230,6 +237,7 @@
             {
                 if (item.Item1.ToString() == dataGridView_items.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString())
                 {
+                    InitializeDataGridView();
                     return;
                 }
 
@@ -241,6 +249,7 @@
             {
                 if (item.Item1.ToString() == dataGridView_items.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString())
                 {
+                    InitializeDataGridView();
                     return;
                 }
 
@@ -251,6 +260,8 @@
                 {
                     if (newValue.Contains(','))
                     {
+                        InitializeDataGridView();
+
                         MessageBox.Show("Wrong price format. Please use '.' instead of ','.", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return;
                     }
@@ -272,12 +283,13 @@
                 catch { }
                 if (double.TryParse(newValue, out value) && valid1 && valid2)
                 {
-                    d = MessageBox.Show($"Sure you want to change price for '{item.Item2}' from '{item.Item2}' to '{newValue}'?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    d = MessageBox.Show($"Sure you want to change price for '{item.Item1}' from '{item.Item2}' to '{newValue}'?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                     item.Item2 = value;
                 }
                 else
                 {
+                    InitializeDataGridView();
                     MessageBox.Show("Wrong price format", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
@@ -292,7 +304,9 @@
                 }
                 else
                 {
+                    InitializeDataGridView();
                     MessageBox.Show("Wrong stock format", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                     return;
                 }
 
@@ -307,13 +321,15 @@
 
             if (d == DialogResult.No)
             {
+                InitializeDataGridView();
+
                 return;
             }
             if (Program.businessHandler.updateItem(itemIndex, colIndex, item))
             {
                 InitializeDataGridView();
                 MessageBox.Show("Item updated succesfuly!", "Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                newValue = "";
+                
             }
             else
             {
@@ -336,5 +352,9 @@
             InitializeDataGridView();
         }
 
+        private void btn_messages_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

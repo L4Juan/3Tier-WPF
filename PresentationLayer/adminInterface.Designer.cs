@@ -42,6 +42,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.btn_deleteItem = new System.Windows.Forms.Button();
             this.btn_refresh = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btn_messages = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_items)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,10 +115,10 @@
             // dataGridView_items
             // 
             this.dataGridView_items.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_items.Location = new System.Drawing.Point(12, 56);
+            this.dataGridView_items.Location = new System.Drawing.Point(12, 66);
             this.dataGridView_items.Name = "dataGridView_items";
             this.dataGridView_items.RowTemplate.Height = 25;
-            this.dataGridView_items.Size = new System.Drawing.Size(435, 329);
+            this.dataGridView_items.Size = new System.Drawing.Size(435, 319);
             this.dataGridView_items.TabIndex = 6;
             this.dataGridView_items.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellEdit);
             // 
@@ -160,7 +162,7 @@
             // 
             // btn_refresh
             // 
-            this.btn_refresh.Location = new System.Drawing.Point(713, 12);
+            this.btn_refresh.Location = new System.Drawing.Point(529, 362);
             this.btn_refresh.Name = "btn_refresh";
             this.btn_refresh.Size = new System.Drawing.Size(75, 23);
             this.btn_refresh.TabIndex = 17;
@@ -168,11 +170,32 @@
             this.btn_refresh.UseVisualStyleBackColor = true;
             this.btn_refresh.Click += new System.EventHandler(this.btn_refresh_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(12, 48);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(283, 15);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "You can update items by changing them in the table";
+            // 
+            // btn_messages
+            // 
+            this.btn_messages.Location = new System.Drawing.Point(610, 362);
+            this.btn_messages.Name = "btn_messages";
+            this.btn_messages.Size = new System.Drawing.Size(75, 23);
+            this.btn_messages.TabIndex = 19;
+            this.btn_messages.Text = "Messages";
+            this.btn_messages.UseVisualStyleBackColor = true;
+            this.btn_messages.Click += new System.EventHandler(this.btn_messages_Click);
+            // 
             // adminInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_messages);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btn_refresh);
             this.Controls.Add(this.btn_deleteItem);
             this.Controls.Add(this.label7);
@@ -216,5 +239,6 @@
         private Label label7;
         private Button btn_deleteItem;
         private Button btn_refresh;
+        private Button btn_messages;
     }
 }

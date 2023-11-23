@@ -6,6 +6,7 @@ namespace DataLayer
 		private List<LogInDetails> logInDetails = new List<LogInDetails>();
         private List<Item> items;
         private List<Offer> offers;
+        public List<Message> messages = new List<Message>();
 		public DataHandler()
 		{
 			for(int i = 0; i < 4; i++)
@@ -123,6 +124,20 @@ namespace DataLayer
             return true;
 
             
+        }
+
+        public bool LowStockItems()
+        {
+            bool r = false;
+            foreach(Item item in items)
+            {
+                if (item.GetStock() < 10 && item.GetStock() != 0)
+                {
+                    messages.Add(new Message($"{item.GetID()} is low in stock"));
+                    r = true;
+                }
+            }
+            return r;
         }
 
         public void ReStock(int v)
