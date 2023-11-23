@@ -12,12 +12,12 @@ namespace PresentationLayer
             string id = txt_id.Text;
             string pwd = txt_pwd.Text;
             Program.businessHandler = new BusinessLayer.HandlerBusiness(id, pwd);
-            if (Program.businessHandler.userType == "admin")
+            if (Program.businessHandler.getUserType() == "admin")
             {
                 Hide();
                 new adminInterface().Show();
             }
-            else if (Program.businessHandler.userType == "customer")
+            else if (Program.businessHandler.getUserType() == "customer")
             {
                 Hide();
                 new customerInterface().Show();

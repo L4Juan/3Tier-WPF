@@ -27,32 +27,34 @@
     ]
   },
   "packageFolders": {
-    "/Users/metaslowly/.nuget/packages/": {}
+    "C:\\Users\\40488349\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/metaslowly/Downloads/WPFSOLUTION/BusinessLayer/BusinessLayer.csproj",
+      "projectUniqueName": "C:\\Users\\40488349\\source\\repos\\3Tier-WPF\\BusinessLayer\\BusinessLayer.csproj",
       "projectName": "BusinessLayer",
-      "projectPath": "/Users/metaslowly/Downloads/WPFSOLUTION/BusinessLayer/BusinessLayer.csproj",
-      "packagesPath": "/Users/metaslowly/.nuget/packages/",
-      "outputPath": "/Users/metaslowly/Downloads/WPFSOLUTION/BusinessLayer/obj/",
+      "projectPath": "C:\\Users\\40488349\\source\\repos\\3Tier-WPF\\BusinessLayer\\BusinessLayer.csproj",
+      "packagesPath": "C:\\Users\\40488349\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\40488349\\source\\repos\\3Tier-WPF\\BusinessLayer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/metaslowly/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\40488349\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "/Users/metaslowly/Downloads/WPFSOLUTION/DataLayer/DataLayer.csproj": {
-              "projectPath": "/Users/metaslowly/Downloads/WPFSOLUTION/DataLayer/DataLayer.csproj"
+            "C:\\Users\\40488349\\source\\repos\\3Tier-WPF\\DataLayer\\DataLayer.csproj": {
+              "projectPath": "C:\\Users\\40488349\\source\\repos\\3Tier-WPF\\DataLayer\\DataLayer.csproj"
             }
           }
         }
@@ -72,8 +74,7 @@
           "net47",
           "net471",
           "net472",
-          "net48",
-          "net481"
+          "net48"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -82,7 +83,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.403/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

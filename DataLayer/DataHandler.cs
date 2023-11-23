@@ -144,6 +144,18 @@ namespace DataLayer
         {
             return true;
         }
+
+        public void DeleteItem(string itemID)
+        {
+            foreach (Item i in items)
+            {
+                if (i.GetID() == itemID)
+                {
+                    items.Remove(i);
+                    return;
+                }
+            }
+        }
     }
 }
 

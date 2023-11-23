@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace PresentationLayer
+﻿namespace PresentationLayer
 {
     public partial class adminInterface : Form
     {
@@ -40,7 +30,8 @@ namespace PresentationLayer
         {
             if (txt_id.Text != null)
             {
-                if (Program.businessHandler.AddItem(txt_id.Text, txt_price.Text, txt_stock.Text, txt_offers.Text))
+                string operation = Program.businessHandler.AddItem(txt_id.Text, txt_price.Text, txt_stock.Text, txt_offers.Text);
+                if (operation == "success")
                 {
                     InitializeDataGridView();
                     MessageBox.Show("Item added succesfuly!", "Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -51,7 +42,23 @@ namespace PresentationLayer
                 }
                 else
                 {
-                    MessageBox.Show("Unable to add item!", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (operation == "id")
+                    {
+                        MessageBox.Show("Id allready exists", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    else if (operation == "price")
+                    { 
+                        MessageBox.Show("Wrong price format. Make sure you use '.' instead of ','.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    else if (operation == "stock")
+                    {
+                        MessageBox.Show("Wrong stock format", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    else if (operation == "offers") 
+                    {
+                        MessageBox.Show("Wrong offers format", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    MessageBox.Show("Unable to add item!", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             } 
         }
@@ -81,7 +88,7 @@ namespace PresentationLayer
                     if (txt_update.Text.Contains(','))
                     {
                         MessageBox.Show("Wrong price format. Please use '.' instead of ','.", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        return ;
+                        return;
                     }
                 }
                 try
@@ -97,7 +104,7 @@ namespace PresentationLayer
                     {
                         valid2 = true;
                     }
-                }catch (Exception ex) {}
+                }catch {}
                 if (double.TryParse(txt_update.Text, out value) && valid1 && valid2) { item.Item2 = value; }
                 else
                 {
@@ -146,10 +153,27 @@ namespace PresentationLayer
 
                 }
             }
-            
         }
 
-     
+        private void btnDeleteItem_Click(object sender, EventArgs e)
+        {
+            if (dataGridView_items.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("No rows selected", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            DialogResult d = MessageBox.Show("Are you sure you want to delete ALL selected items?", "ConfirmationRequiered", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (d == DialogResult.Yes)
+            {
+                for (int i = 0; i < dataGridView_items.SelectedRows.Count; i++)
+                {
+                    int rowIndex = dataGridView_items.SelectedRows[i].Index;
+                    string itemID = (string)dataGridView_items.Rows[rowIndex].Cells[0].Value;
+                    Program.businessHandler.DeleteItem(itemID);
+                }
+                InitializeDataGridView();
+            }
+
+        }
     }
-        
 }

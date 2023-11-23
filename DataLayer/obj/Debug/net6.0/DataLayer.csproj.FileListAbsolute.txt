@@ -45,3 +45,15 @@ C:/Users/40488349/source/repos/WPFSOLUTION/DataLayer/obj/Debug/net6.0/ref/DataLa
 /Users/metaslowly/Downloads/WPFSOLUTION/DataLayer/bin/Debug/net6.0/DataLayer.dll
 /Users/metaslowly/Downloads/WPFSOLUTION/DataLayer/bin/Debug/net6.0/DataLayer.pdb
 /Users/metaslowly/Downloads/WPFSOLUTION/DataLayer/obj/Debug/net6.0/ref/DataLayer.dll
+C:\Users\40488349\Source\Repos\3Tier-WPF\DataLayer\bin\Debug\net6.0\DataLayer.deps.json
+C:\Users\40488349\Source\Repos\3Tier-WPF\DataLayer\bin\Debug\net6.0\DataLayer.dll
+C:\Users\40488349\Source\Repos\3Tier-WPF\DataLayer\bin\Debug\net6.0\DataLayer.pdb
+C:\Users\40488349\Source\Repos\3Tier-WPF\DataLayer\obj\Debug\net6.0\DataLayer.csproj.AssemblyReference.cache
+C:\Users\40488349\Source\Repos\3Tier-WPF\DataLayer\obj\Debug\net6.0\DataLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\40488349\Source\Repos\3Tier-WPF\DataLayer\obj\Debug\net6.0\DataLayer.AssemblyInfoInputs.cache
+C:\Users\40488349\Source\Repos\3Tier-WPF\DataLayer\obj\Debug\net6.0\DataLayer.AssemblyInfo.cs
+C:\Users\40488349\Source\Repos\3Tier-WPF\DataLayer\obj\Debug\net6.0\DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\40488349\Source\Repos\3Tier-WPF\DataLayer\obj\Debug\net6.0\DataLayer.dll
+C:\Users\40488349\Source\Repos\3Tier-WPF\DataLayer\obj\Debug\net6.0\refint\DataLayer.dll
+C:\Users\40488349\Source\Repos\3Tier-WPF\DataLayer\obj\Debug\net6.0\DataLayer.pdb
+C:\Users\40488349\Source\Repos\3Tier-WPF\DataLayer\obj\Debug\net6.0\ref\DataLayer.dll

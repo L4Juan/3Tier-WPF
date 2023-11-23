@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tH/sD8eACilNrif714AEnBUbuFGCJ3XLcVsx264l1iR94KP8NrIlibp8zXVVFkvRsm8/t2LR9P9Rl0oYxHxwTQ==",
+  "dgSpecHash": "JN+EuNrAdc6tC0NL3hUMv2RQypraH2axaoCYOkFz3/ZYN2QxEw/bGsqVqEVweJD4FQ1YL1ydJrnruHkFVeMsSw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\40488349\\source\\repos\\WPFSOLUTION\\PresentationLayer\\PresentationLayer.csproj",
+  "projectFilePath": "C:\\Users\\40488349\\source\\repos\\3Tier-WPF\\PresentationLayer\\PresentationLayer.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
