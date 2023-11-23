@@ -122,5 +122,16 @@ namespace BusinessLayer
             }
 			return true;
         }
+
+        public string[] OutOfStockItems()
+        {
+			string[] outOfStockItems = dataHandler.OutOfStockItems().ToArray();
+			return outOfStockItems;
+		}
+
+        public void ReStock()
+        {
+			dataHandler.ReStock(100);
+        }
     }
 }

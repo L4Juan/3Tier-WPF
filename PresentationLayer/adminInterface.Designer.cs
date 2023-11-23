@@ -33,18 +33,15 @@
             this.txt_stock = new System.Windows.Forms.TextBox();
             this.txt_offers = new System.Windows.Forms.TextBox();
             this.btn_add = new System.Windows.Forms.Button();
-            this.btn_update = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView_items = new System.Windows.Forms.DataGridView();
             this.btn_backFromAdmin = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.txt_update = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.btn_deleteItem = new System.Windows.Forms.Button();
+            this.btn_refresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_items)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,16 +83,6 @@
             this.btn_add.UseVisualStyleBackColor = true;
             this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
-            // btn_update
-            // 
-            this.btn_update.Location = new System.Drawing.Point(587, 297);
-            this.btn_update.Name = "btn_update";
-            this.btn_update.Size = new System.Drawing.Size(90, 23);
-            this.btn_update.TabIndex = 6;
-            this.btn_update.Text = "Update Cell";
-            this.btn_update.UseVisualStyleBackColor = true;
-            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -128,10 +115,10 @@
             this.dataGridView_items.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_items.Location = new System.Drawing.Point(12, 56);
             this.dataGridView_items.Name = "dataGridView_items";
-            this.dataGridView_items.ReadOnly = true;
             this.dataGridView_items.RowTemplate.Height = 25;
             this.dataGridView_items.Size = new System.Drawing.Size(435, 329);
             this.dataGridView_items.TabIndex = 6;
+            this.dataGridView_items.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellEdit);
             // 
             // btn_backFromAdmin
             // 
@@ -152,31 +139,6 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "offers :";
             // 
-            // txt_update
-            // 
-            this.txt_update.Location = new System.Drawing.Point(577, 268);
-            this.txt_update.Name = "txt_update";
-            this.txt_update.Size = new System.Drawing.Size(100, 23);
-            this.txt_update.TabIndex = 5;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(506, 271);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(66, 15);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "new value :";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(567, 250);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(121, 15);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "select a cell to update";
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -196,23 +158,30 @@
             this.btn_deleteItem.UseVisualStyleBackColor = true;
             this.btn_deleteItem.Click += new System.EventHandler(this.btnDeleteItem_Click);
             // 
+            // btn_refresh
+            // 
+            this.btn_refresh.Location = new System.Drawing.Point(713, 12);
+            this.btn_refresh.Name = "btn_refresh";
+            this.btn_refresh.Size = new System.Drawing.Size(75, 23);
+            this.btn_refresh.TabIndex = 17;
+            this.btn_refresh.Text = "Refresh";
+            this.btn_refresh.UseVisualStyleBackColor = true;
+            this.btn_refresh.Click += new System.EventHandler(this.btn_refresh_Click);
+            // 
             // adminInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_refresh);
             this.Controls.Add(this.btn_deleteItem);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.txt_update);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btn_backFromAdmin);
             this.Controls.Add(this.dataGridView_items);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btn_update);
             this.Controls.Add(this.btn_add);
             this.Controls.Add(this.txt_offers);
             this.Controls.Add(this.txt_stock);
@@ -226,6 +195,7 @@
 
         }
 
+       
         #endregion
 
         private TextBox txt_id;
@@ -245,5 +215,6 @@
         private Label label6;
         private Label label7;
         private Button btn_deleteItem;
+        private Button btn_refresh;
     }
 }

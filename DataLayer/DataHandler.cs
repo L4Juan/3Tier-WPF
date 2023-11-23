@@ -125,6 +125,31 @@ namespace DataLayer
             
         }
 
+        public void ReStock(int v)
+        {
+            foreach(Item item in items)
+            {
+                if (item.GetStock() == 0)
+                {
+                    item.SetStock(v);
+                }
+            }
+        }
+
+        public List<string> OutOfStockItems()
+        {
+            List<string> outOfStockItems = new List<string>();
+
+            foreach(Item item in items)
+            {
+                if (item.GetStock() == 0)
+                {
+                    outOfStockItems.Add(item.GetID());
+                }
+            }
+            return outOfStockItems;
+        }
+
         public List<string> GetOffers()
         {
             List<string> returnOffers = new List<string>();
