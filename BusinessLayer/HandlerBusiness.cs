@@ -7,28 +7,48 @@ namespace BusinessLayer
 		private string userType;
 		public string getUserType() {  return userType; }
 
-		public HandlerBusiness(string id, string pwd)
+		public HandlerBusiness()
 		{
 			dataHandler = new DataLayer.DataHandler();
+			
+		}
+
+        public void LogIn(string id, string pwd)
+        {
 			userType = dataHandler.CheckLogInDetails(id, pwd);
 		}
 
+        public int GetNumOfCustomers()
+		{
+			return dataHandler.GetNumOfCustomers();
+		}
 		public int GetNumOfItems()
-        {
+		{
 			return dataHandler.GetNumOfItems();
-        }
-        public (string, double, int, string) GetItemData(int i)
+		}
+		public (string, double, int, string) GetItemData(int i)
         {
 			(string, double, int, string) itemData = dataHandler.GetItemData(i);
 			return (itemData);
         }
-		public int GetItemIndex(string id)
+
+        public string[] GetMessages()
+        {
+			return dataHandler.GetMessages();
+        }
+
+        public int GetItemIndex(string id)
 		{
 			int itemIndex = dataHandler.GetItemIndex(id);
 			return (itemIndex);
 		}
 
-		public string AddItem(string id, string price, string stock, string offers)
+        public (string, int, bool) GetCustomerData(int i)
+        {
+			return dataHandler.GetCustomerData(i);
+        }
+
+        public string AddItem(string id, string price, string stock, string offers)
         {
             if (!dataHandler.Exists(id))
             {
@@ -70,6 +90,12 @@ namespace BusinessLayer
             }
 			return true;
         }
+
+        public void UpdateCustomer(string id, string value)
+        {
+			dataHandler.UpdateCustomer(id, value);
+        }
+
         public bool updateItem(int index, int changeIndex, (string, double, int, string) item)
         {
 			if (changeIndex == 0)

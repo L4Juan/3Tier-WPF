@@ -7,6 +7,7 @@ namespace DataLayer
         private List<Item> items;
         private List<Offer> offers;
         public List<Message> messages = new List<Message>();
+        public List<Customer> customers = new List<Customer>();
 		public DataHandler()
 		{
 			for(int i = 0; i < 4; i++)
@@ -28,6 +29,33 @@ namespace DataLayer
                 new Offer("20%")
             };
 
+            foreach (LogInDetails l in logInDetails)
+            {
+                if (!l.IsAdmin())
+                {
+                    customers.Add(new Customer(l.GetID(), 0, false));
+                }
+            }
+        }
+
+        public (string, int, bool) GetCustomerData(int i)
+        {
+            return (customers[i].Id, customers[i].Loyalty, customers[i].Enabled);
+        }
+
+        public int GetNumOfCustomers()
+        {
+            return customers.Count;
+        }
+
+        public string[] GetMessages()
+        {
+            List<string> msgs = new List<string>();
+            foreach (Message message in messages)
+            {
+                msgs.Add(message.MessageContent);
+            }
+            return msgs.ToArray();
         }
 
         public int GetNumOfItems()
@@ -52,6 +80,29 @@ namespace DataLayer
             return -1;
             
         }
+
+        public void UpdateCustomer(string? id, string? value)
+        {
+            for (int i =0; i < customers.Count; i++)
+            {
+                if (customers[i].Id == id)
+                {
+                    if (int.TryParse(value, out int v))
+                    {
+                        customers[i].Loyalty = v;
+                    }
+                    else 
+                    {
+                        if (value == "true")
+                        {
+                            customers[i].Enabled = true;
+                        }
+                        else { customers[i].Enabled = false; }
+                    }
+                }
+            }
+        }
+
         public bool Exists(string id)
         {
             foreach (Item item in items)
@@ -128,12 +179,13 @@ namespace DataLayer
 
         public bool LowStockItems()
         {
+            messages.Clear();
             bool r = false;
             foreach(Item item in items)
             {
                 if (item.GetStock() < 10 && item.GetStock() != 0)
                 {
-                    messages.Add(new Message($"{item.GetID()} is low in stock"));
+                    messages.Add(new Message($"Message: {item.GetID()} is low in stock"));
                     r = true;
                 }
             }

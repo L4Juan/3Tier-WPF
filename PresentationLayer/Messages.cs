@@ -15,6 +15,9 @@ namespace PresentationLayer
         public Messages()
         {
             InitializeComponent();
+            listBox_messages.Items.Clear();
+            string[] messages = Program.businessHandler.GetMessages();
+            listBox_messages.DataSource = messages;
         }
     }
 }

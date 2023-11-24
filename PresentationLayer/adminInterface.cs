@@ -11,7 +11,7 @@
         private void InitializeDataGridView()
         {
             List<Item> items = new List<Item>();
-            int numOfItems = Program.businessHandler.GetNumOfItems();
+            int numOfItems = Program.businessHandler.GetNumOfCustomers();
             for (int i = 0; i < numOfItems; i++)
             {
                 (string, double, int, string) data = Program.businessHandler.GetItemData(i);
@@ -354,7 +354,13 @@
 
         private void btn_messages_Click(object sender, EventArgs e)
         {
+            Program.businessHandler.LowStockItems();
+            new Messages().Show();
+        }
 
+        private void btn_customers_Click(object sender, EventArgs e)
+        {
+            new customerInterface().Show();
         }
     }
 }

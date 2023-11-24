@@ -11,7 +11,8 @@ namespace PresentationLayer
         {
             string id = txt_id.Text;
             string pwd = txt_pwd.Text;
-            Program.businessHandler = new BusinessLayer.HandlerBusiness(id, pwd);
+            
+            Program.businessHandler.LogIn(id, pwd);
             if (Program.businessHandler.getUserType() == "admin")
             {
                 Hide();

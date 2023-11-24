@@ -3,17 +3,16 @@ namespace DataLayer
 {
     public class Customer
     {
-        private int id;
-        private bool loyalty;
-        private bool enabled;
-        public Customer(int id, bool loyalty, bool enabled)
+        public string Id { get; set; }
+        public int Loyalty { get; set; }
+        public bool Enabled { get; set; }
+        public Customer(string id, int loyalty, bool enabled)
         {
-            this.id = id;
-            this.loyalty = loyalty;
-            this.enabled = enabled;
+            Id = id;
+            Loyalty = loyalty;
+            Enabled = enabled;
         }
-        public bool GetEnabled() { return enabled; }
-        public void SetEnabled(bool enabled) { this.enabled = enabled; }
+        
          
         //Todo create functionality for loyalty (get set) (auto check if certain amount of orders)
 

@@ -16,8 +16,9 @@ namespace PresentationLayer
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
 
-            
+            businessHandler = new BusinessLayer.HandlerBusiness();
             Application.Run(new Form1());
+
         }
     }
 }

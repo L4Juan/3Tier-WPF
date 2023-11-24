@@ -44,6 +44,7 @@
             this.btn_refresh = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.btn_messages = new System.Windows.Forms.Button();
+            this.btn_customers = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_items)).BeginInit();
             this.SuspendLayout();
             // 
@@ -162,7 +163,7 @@
             // 
             // btn_refresh
             // 
-            this.btn_refresh.Location = new System.Drawing.Point(529, 362);
+            this.btn_refresh.Location = new System.Drawing.Point(602, 378);
             this.btn_refresh.Name = "btn_refresh";
             this.btn_refresh.Size = new System.Drawing.Size(75, 23);
             this.btn_refresh.TabIndex = 17;
@@ -181,7 +182,7 @@
             // 
             // btn_messages
             // 
-            this.btn_messages.Location = new System.Drawing.Point(610, 362);
+            this.btn_messages.Location = new System.Drawing.Point(517, 317);
             this.btn_messages.Name = "btn_messages";
             this.btn_messages.Size = new System.Drawing.Size(75, 23);
             this.btn_messages.TabIndex = 19;
@@ -189,11 +190,22 @@
             this.btn_messages.UseVisualStyleBackColor = true;
             this.btn_messages.Click += new System.EventHandler(this.btn_messages_Click);
             // 
+            // btn_customers
+            // 
+            this.btn_customers.Location = new System.Drawing.Point(598, 317);
+            this.btn_customers.Name = "btn_customers";
+            this.btn_customers.Size = new System.Drawing.Size(79, 23);
+            this.btn_customers.TabIndex = 20;
+            this.btn_customers.Text = "Customers";
+            this.btn_customers.UseVisualStyleBackColor = true;
+            this.btn_customers.Click += new System.EventHandler(this.btn_customers_Click);
+            // 
             // adminInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_customers);
             this.Controls.Add(this.btn_messages);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btn_refresh);
@@ -240,5 +252,6 @@
         private Button btn_deleteItem;
         private Button btn_refresh;
         private Button btn_messages;
+        private Button btn_customers;
     }
 }
