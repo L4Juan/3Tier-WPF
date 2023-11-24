@@ -8,6 +8,7 @@ namespace DataLayer
         private List<Offer> offers;
         public List<Message> messages = new List<Message>();
         public List<Customer> customers = new List<Customer>();
+        public List<Order> orders = new List<Order>();
 		public DataHandler()
 		{
 			for(int i = 0; i < 4; i++)
@@ -36,6 +37,19 @@ namespace DataLayer
                     customers.Add(new Customer(l.GetID(), 0, false));
                 }
             }
+        }
+        public List<string> GetOrders()
+        {
+            List<string> os = new List<string>();
+            foreach (Order o in orders)
+            {
+                os.Add(o.Details.ToString());
+            }
+            return os;
+        }
+        public void PlaceOrder(string v)
+        {
+            orders.Add(new Order(v));
         }
 
         public (string, int, bool) GetCustomerData(int i)

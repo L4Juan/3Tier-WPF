@@ -35,10 +35,10 @@
             // dataGridView_customer
             // 
             this.dataGridView_customer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_customer.Location = new System.Drawing.Point(51, 74);
+            this.dataGridView_customer.Location = new System.Drawing.Point(31, 74);
             this.dataGridView_customer.Name = "dataGridView_customer";
             this.dataGridView_customer.RowTemplate.Height = 25;
-            this.dataGridView_customer.Size = new System.Drawing.Size(680, 298);
+            this.dataGridView_customer.Size = new System.Drawing.Size(491, 298);
             this.dataGridView_customer.TabIndex = 1;
             this.dataGridView_customer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_customer_CellContentClick);
             this.dataGridView_customer.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellEdit);

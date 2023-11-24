@@ -5,6 +5,7 @@ namespace BusinessLayer
     {
 		DataLayer.DataHandler dataHandler;
 		private string userType;
+		private string id;
 		public string getUserType() {  return userType; }
 
 		public HandlerBusiness()
@@ -16,13 +17,29 @@ namespace BusinessLayer
         public void LogIn(string id, string pwd)
         {
 			userType = dataHandler.CheckLogInDetails(id, pwd);
+			this.id = id;
 		}
+
+        public string[] GetOrders()
+        {
+			
+            return dataHandler.GetOrders().ToArray();
+        }
 
         public int GetNumOfCustomers()
 		{
 			return dataHandler.GetNumOfCustomers();
 		}
-		public int GetNumOfItems()
+
+        public void PlaceOrder()
+        {
+			DateTime currentDateTime = DateTime.Now;
+
+			dataHandler.PlaceOrder($"{currentDateTime}: customer with id: {id} placed an order");
+
+        }
+
+        public int GetNumOfItems()
 		{
 			return dataHandler.GetNumOfItems();
 		}

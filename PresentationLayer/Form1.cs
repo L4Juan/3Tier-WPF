@@ -21,7 +21,7 @@ namespace PresentationLayer
             else if (Program.businessHandler.getUserType() == "customer")
             {
                 Hide();
-                new customerInterface().Show();
+                new CustomerOrder().Show();
             }
             else
             {

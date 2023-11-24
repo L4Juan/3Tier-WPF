@@ -362,5 +362,10 @@
         {
             new customerInterface().Show();
         }
+
+        private void btn_report_Click(object sender, EventArgs e)
+        {
+            new Report().Show();
+        }
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\40488349\\Source\\Repos\\3Tier-WPF\\DataLayer\\DataLayer.csproj": {}
+    "C:\\Users\\40488349\\source\\repos\\3Tier-WPF\\DataLayer\\DataLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\40488349\\Source\\Repos\\3Tier-WPF\\DataLayer\\DataLayer.csproj": {
+    "C:\\Users\\40488349\\source\\repos\\3Tier-WPF\\DataLayer\\DataLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\40488349\\Source\\Repos\\3Tier-WPF\\DataLayer\\DataLayer.csproj",
+        "projectUniqueName": "C:\\Users\\40488349\\source\\repos\\3Tier-WPF\\DataLayer\\DataLayer.csproj",
         "projectName": "DataLayer",
-        "projectPath": "C:\\Users\\40488349\\Source\\Repos\\3Tier-WPF\\DataLayer\\DataLayer.csproj",
+        "projectPath": "C:\\Users\\40488349\\source\\repos\\3Tier-WPF\\DataLayer\\DataLayer.csproj",
         "packagesPath": "C:\\Users\\40488349\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\40488349\\Source\\Repos\\3Tier-WPF\\DataLayer\\obj\\",
+        "outputPath": "C:\\Users\\40488349\\source\\repos\\3Tier-WPF\\DataLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\40488349\\AppData\\Roaming\\NuGet\\NuGet.Config",

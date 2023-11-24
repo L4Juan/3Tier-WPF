@@ -50,11 +50,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\40488349\\Source\\Repos\\3Tier-WPF\\PresentationLayer\\PresentationLayer.csproj",
+      "projectUniqueName": "C:\\Users\\40488349\\source\\repos\\3Tier-WPF\\PresentationLayer\\PresentationLayer.csproj",
       "projectName": "PresentationLayer",
-      "projectPath": "C:\\Users\\40488349\\Source\\Repos\\3Tier-WPF\\PresentationLayer\\PresentationLayer.csproj",
+      "projectPath": "C:\\Users\\40488349\\source\\repos\\3Tier-WPF\\PresentationLayer\\PresentationLayer.csproj",
       "packagesPath": "C:\\Users\\40488349\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\40488349\\Source\\Repos\\3Tier-WPF\\PresentationLayer\\obj\\",
+      "outputPath": "C:\\Users\\40488349\\source\\repos\\3Tier-WPF\\PresentationLayer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\40488349\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -71,8 +71,8 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "C:\\Users\\40488349\\Source\\Repos\\3Tier-WPF\\BusinessLayer\\BusinessLayer.csproj": {
-              "projectPath": "C:\\Users\\40488349\\Source\\Repos\\3Tier-WPF\\BusinessLayer\\BusinessLayer.csproj"
+            "C:\\Users\\40488349\\source\\repos\\3Tier-WPF\\BusinessLayer\\BusinessLayer.csproj": {
+              "projectPath": "C:\\Users\\40488349\\source\\repos\\3Tier-WPF\\BusinessLayer\\BusinessLayer.csproj"
             }
           }
         }

@@ -32,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\40488349\\Source\\Repos\\3Tier-WPF\\BusinessLayer\\BusinessLayer.csproj",
+      "projectUniqueName": "C:\\Users\\40488349\\source\\repos\\3Tier-WPF\\BusinessLayer\\BusinessLayer.csproj",
       "projectName": "BusinessLayer",
-      "projectPath": "C:\\Users\\40488349\\Source\\Repos\\3Tier-WPF\\BusinessLayer\\BusinessLayer.csproj",
+      "projectPath": "C:\\Users\\40488349\\source\\repos\\3Tier-WPF\\BusinessLayer\\BusinessLayer.csproj",
       "packagesPath": "C:\\Users\\40488349\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\40488349\\Source\\Repos\\3Tier-WPF\\BusinessLayer\\obj\\",
+      "outputPath": "C:\\Users\\40488349\\source\\repos\\3Tier-WPF\\BusinessLayer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\40488349\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -53,8 +53,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\40488349\\Source\\Repos\\3Tier-WPF\\DataLayer\\DataLayer.csproj": {
-              "projectPath": "C:\\Users\\40488349\\Source\\Repos\\3Tier-WPF\\DataLayer\\DataLayer.csproj"
+            "C:\\Users\\40488349\\source\\repos\\3Tier-WPF\\DataLayer\\DataLayer.csproj": {
+              "projectPath": "C:\\Users\\40488349\\source\\repos\\3Tier-WPF\\DataLayer\\DataLayer.csproj"
             }
           }
         }

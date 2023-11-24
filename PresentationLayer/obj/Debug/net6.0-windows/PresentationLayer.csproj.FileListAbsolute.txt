@@ -71,3 +71,5 @@ C:\Users\40488349\Source\Repos\3Tier-WPF\PresentationLayer\obj\Debug\net6.0-wind
 C:\Users\40488349\Source\Repos\3Tier-WPF\PresentationLayer\obj\Debug\net6.0-windows\PresentationLayer.genruntimeconfig.cache
 C:\Users\40488349\Source\Repos\3Tier-WPF\PresentationLayer\obj\Debug\net6.0-windows\ref\PresentationLayer.dll
 C:\Users\40488349\source\repos\3Tier-WPF\PresentationLayer\obj\Debug\net6.0-windows\PresentationLayer.Messages.resources
+C:\Users\40488349\Source\Repos\3Tier-WPF\PresentationLayer\obj\Debug\net6.0-windows\PresentationLayer.CustomerOrder.resources
+C:\Users\40488349\Source\Repos\3Tier-WPF\PresentationLayer\obj\Debug\net6.0-windows\PresentationLayer.Report.resources

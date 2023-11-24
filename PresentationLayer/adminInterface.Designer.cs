@@ -45,6 +45,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.btn_messages = new System.Windows.Forms.Button();
             this.btn_customers = new System.Windows.Forms.Button();
+            this.btn_report = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_items)).BeginInit();
             this.SuspendLayout();
             // 
@@ -200,11 +201,22 @@
             this.btn_customers.UseVisualStyleBackColor = true;
             this.btn_customers.Click += new System.EventHandler(this.btn_customers_Click);
             // 
+            // btn_report
+            // 
+            this.btn_report.Location = new System.Drawing.Point(683, 317);
+            this.btn_report.Name = "btn_report";
+            this.btn_report.Size = new System.Drawing.Size(75, 23);
+            this.btn_report.TabIndex = 21;
+            this.btn_report.Text = "Report";
+            this.btn_report.UseVisualStyleBackColor = true;
+            this.btn_report.Click += new System.EventHandler(this.btn_report_Click);
+            // 
             // adminInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_report);
             this.Controls.Add(this.btn_customers);
             this.Controls.Add(this.btn_messages);
             this.Controls.Add(this.label5);
@@ -253,5 +265,6 @@
         private Button btn_refresh;
         private Button btn_messages;
         private Button btn_customers;
+        private Button btn_report;
     }
 }
