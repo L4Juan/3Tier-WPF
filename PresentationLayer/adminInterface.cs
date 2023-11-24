@@ -11,7 +11,7 @@
         private void InitializeDataGridView()
         {
             List<Item> items = new List<Item>();
-            int numOfItems = Program.businessHandler.GetNumOfCustomers();
+            int numOfItems = Program.businessHandler.GetNumOfItems();
             for (int i = 0; i < numOfItems; i++)
             {
                 (string, double, int, string) data = Program.businessHandler.GetItemData(i);
